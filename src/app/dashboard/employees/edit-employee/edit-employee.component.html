@@ -1,0 +1,55 @@
+<h2>Edit Employee</h2>
+<form [formGroup]="form" (ngSubmit)="submit()" class="w3-container align-center w3-card login-card">
+      
+    <div class="form-group">
+        <label for="name" class="w3-text-blue">Name</label>
+        <input 
+            formControlName="name"
+            id="name" 
+            type="text" 
+            class="w3-input w3-border">
+        <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+            <div *ngIf="f['name'].errors && f['name'].errors['required']">Name is required.</div>
+            <div *ngIf="f['name'].errors && f['name'].errors['minlength']">Name should be 3 character.</div>
+        </div>
+    </div>
+   <br/>
+    <div class="form-group">
+        <label for="email" class="w3-text-blue">Email</label>
+        <input 
+            formControlName="email"
+            id="email" 
+            type="text" 
+            class="w3-input w3-border">
+        <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+            <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+            <div *ngIf="f['email'].errors && f['email'].errors['email']">Please, enter valid email address.</div>
+        </div>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="password" class="w3-text-blue">Password</label>
+        <input 
+            formControlName="password"
+            id="password" 
+            type="password" 
+            class="w3-input w3-border">
+        <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+            <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+        </div>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="role" class="w3-text-blue">Role</label>
+        <select
+        class="w3-input w3-border"
+          formControlName="role"
+        >
+          <option *ngFor="let role of roles" [ngValue]="role">
+            {{ role }}
+          </option>
+        </select>  
+    </div>
+    
+    <button class="w3-btn w3-blue" type="submit" [disabled]="!form.valid">Submit</button>
+</form>

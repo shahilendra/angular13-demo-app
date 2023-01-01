@@ -1,0 +1,41 @@
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+
+    form {
+        width: 373px;
+    }
+
+    .btn-width {
+        width: 100%;
+    }
+
+    h1{
+        text-align: center;
+        background-color: aquamarine;
+        color: brown;
+    }
+    .ms-3{
+        margin-left: 25rem!important;
+    }
+
+  .img{
+    margin-left: 1rem!important;
+      color: blue;
+      font-weight: bold;
+      
+  }
+  .product{
+    margin-left: 24rem!important;
+    color: blue;
+      font-weight: bold;
+      
+  }
+  .price{
+    margin-left: 33rem!important;
+    color: blue;
+    font-weight: bold;
+      
+  }

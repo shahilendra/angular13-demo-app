@@ -1,0 +1,31 @@
+<h2>Employee Specific Page</h2>
+<mat-grid-list cols="2" >
+    <mat-grid-tile>
+        <mat-card class="mat-card">
+            <mat-card-header>
+              <mat-card-title>EMP Id {{employee?.empId}}</mat-card-title>
+              <mat-card-subtitle>{{employee?.name}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="employee?.imageUrl" alt="Photo of a Employee">
+            <mat-card-content>
+                <p>
+                    Joining Date: {{employee?.joiningDate}}
+                </p>
+            </mat-card-content>
+          </mat-card>
+    </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card style="width: 400px;">
+        <mat-card-header>
+          <mat-card-title>Project Details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-list role="list">
+                <mat-list-item role="listitem" *ngFor="let project of employee?.projects;">{{project}}</mat-list-item>
+              </mat-list>
+        </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+
+ 
+</mat-grid-list>

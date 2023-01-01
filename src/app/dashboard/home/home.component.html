@@ -1,0 +1,72 @@
+<div (keydown)="keyDown($event)" (keyup)="keyUp($event)">
+  <nav
+    class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card-2"
+    style="z-index: 3; width: 250px"
+    id="mySidebar"
+  >
+    <a
+      *ngIf="userRole == 'Admin'"
+      class="w3-bar-item w3-button"
+      [ngClass]="{ 'w3-teal': active === '/' }"
+      routerLink="/"
+    >
+      <i class="w3-medium fa fa-user"></i> Dashboard</a
+    >
+    <a
+      *ngIf="userRole == 'Admin'"
+      class="w3-bar-item w3-button"
+      routerLink="/add"
+      [ngClass]="{ 'w3-teal': active === '/add' }"
+    >
+      <i class="w3-medium fa fa-plus"></i> Register</a
+    >
+    <a
+      *ngIf="userRole == 'Admin'"
+      class="w3-bar-item w3-button"
+      routerLink="/table"
+      [ngClass]="{ 'w3-teal': active === '/table' }"
+    >
+      <i class="w3-medium fa fa-plus"></i> Employee Table</a
+    >
+    <a
+      *ngIf="userRole == 'Admin'"
+      class="w3-bar-item w3-button"
+      routerLink="/chart"
+      [ngClass]="{ 'w3-teal': active === '/chart' }"
+    >
+      <i class="w3-medium fa fa-plus"></i> Chart</a
+    >
+    <a
+      *ngIf="userRole == 'Admin'"
+      class="w3-bar-item w3-button"
+      routerLink="/cart"
+      [ngClass]="{ 'w3-teal': active === '/cart' }"
+    >
+      <i class="w3-medium fa fa-plus"></i> Cart</a
+    >
+    <a
+      *ngIf="userRole == 'Admin'"
+      class="w3-bar-item w3-button"
+      routerLink="/registration"
+      [ngClass]="{ 'w3-teal': active === '/registration' }"
+    >
+      <i class="w3-medium fa fa-plus"></i> Registration</a
+    >
+    <a
+      *ngIf="userRole == 'Admin'"
+      class="w3-bar-item w3-button"
+      routerLink="/dynamic"
+      [ngClass]="{ 'w3-teal': active === '/dynamic' }"
+    >
+      <i class="w3-medium fa fa-plus"></i> Dynamic Form</a
+    >
+    <a class="w3-bar-item w3-button" (click)="onLogout()"
+      ><i class="w3-medium fa fa-sign-out"></i> Logout</a
+    >
+  </nav>
+  <div class="w3-main" style="margin-left: 250px">
+    <div class="w3-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{
+    "name": "Anitha",
+    "empId": "123",
+    "email": "anitha@gmail.com",
+    "imageUrl":"assets/employee-icon-png-17.jpg",
+    "joiningDate": "20 March 2016",
+    "projects": [
+        "Project 1",
+        "Project 2",
+        "Project 3",
+        "Project 4",
+        "Project 5"
+    ]
+}

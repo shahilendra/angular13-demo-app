@@ -1,0 +1,41 @@
+table {
+    width: 100%;
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  .red-color 
+  {
+    color: red;
+  }
+  .blue-color {
+    color: blue;
+  }
+  .right-display {
+    float: right;
+  }
+  .text-align {
+    text-align: center;
+    background: aqua;
+    height: 30px;
+    font-size: larger;
+    font-weight: bolder;
+  }
+
+  .mat-form-field{
+      background-color: pink;
+      font-size: medium;
+      font-weight: bold;
+  }
+
+  .mat-label{
+    font-size: medium;
+    font-weight: bold;
+  }
+
+  th.mat-header-cell {
+    font-size: medium;
+    font-weight: bolder;
+    color: blue;
+  }

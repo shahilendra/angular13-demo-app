@@ -1,0 +1,87 @@
+[
+    {
+        "name": "Anitha",
+        "empId": "1",
+        "email": "anitha@gmail.com",
+        "gender": "Female",
+        "role": "Employee",
+        "password": "test123"
+    }, {
+        "name": "Ram",
+        "empId": "2",
+        "email": "Ram@gmail.com",
+        "gender": "Male",
+        "role": "Admin",
+        "password": "test123"
+    },{
+        "name": "Santosh",
+        "empId": "3",
+        "email": "santosh@gmail.com",
+        "gender": "Male",
+        "role": "Admin",
+        "password": "test123"
+    },{
+        "name": "Ramesh",
+        "empId": "4",
+        "email": "ramesh@gmail.com",
+        "gender": "Male",
+        "role": "Employee",
+        "password": "test123"
+    }, {
+        "name": "Shailendra",
+        "empId": "5",
+        "email": "shailendra@gmail.com",
+        "gender": "Male",
+        "role": "Employee",
+        "password": "test123"
+    }, {
+        "name": "Ragini",
+        "empId": "6",
+        "email": "ragini@gmail.com",
+        "gender": "Female",
+        "role": "Employee",
+        "password": "test123"
+    }, {
+        "name": "Anitha",
+        "empId": "7",
+        "email": "anitha@gmail.com",
+        "gender": "Female",
+        "role": "Employee",
+        "password": "test123"
+    }, {
+        "name": "Ram",
+        "empId": "8",
+        "email": "Ram@gmail.com",
+        "gender": "Male",
+        "role": "Employee",
+        "password": "test123"
+    },{
+        "name": "Santosh",
+        "empId": "9",
+        "email": "santosh@gmail.com",
+        "gender": "Male",
+        "role": "Employee",
+        "password": "test123"
+    },{
+        "name": "Ramesh",
+        "empId": "10",
+        "email": "ramesh@gmail.com",
+        "gender": "Male",
+        "role": "Employee",
+        "password": "test123"
+    }, {
+        "name": "Shailendra",
+        "empId": "11",
+        "email": "shailendra@gmail.com",
+        "gender": "Male",
+        "role": "Employee",
+        "password": "test123"
+    }, {
+        "name": "Ragini",
+        "empId": "12",
+        "email": "ragini@gmail.com",
+        "gender": "Female",
+        "role": "Employee",
+        "password": "test123"
+    }
+]

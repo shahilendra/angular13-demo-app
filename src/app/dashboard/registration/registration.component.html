@@ -1,0 +1,135 @@
+<h2>Registration Page</h2>
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="saveDetails(form)">
+    <mat-form-field appearance="standard" class="width-50">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        maxlength="15"
+        inputmode="tel"
+        placeholder="Type name"
+        formControlName="name"
+        #nameInput
+      />
+      <mat-hint>Mini character 10: {{ nameInput.value.length }}/10</mat-hint>
+      <mat-error *ngIf="f['name'].errors && f['name'].errors['required']"
+        >Name is required</mat-error
+      >
+      <mat-error *ngIf="f['name'].errors && f['name'].errors['minlength']">
+        Please enter more than 10 character
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="width-50">
+      <mat-label>Email Address:</mat-label>
+      <input
+        matInput
+        type="email"
+        formControlName="email"
+        placeholder="Your email"
+      />
+      <mat-icon matSuffix>mail_outline</mat-icon>
+      <mat-hint>Input the fully qualified email address</mat-hint>
+      <mat-error *ngIf="f['email'].errors && f['email'].errors['required']"
+        >Email is required</mat-error
+      >
+      <mat-error *ngIf="f['email'].errors && f['email'].errors['pattern']"
+        >Please enter valid email</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="width-50">
+      <mat-label>Phone:</mat-label>
+      <input matInput formControlName="phone" placeholder="Your Phone" type="number"/>
+      <mat-icon matSuffix>phone</mat-icon>
+      <mat-hint>Input the fully qualified phone number</mat-hint>
+      <mat-error *ngIf="f['email'].errors && f['email'].errors['required']"
+        >Phone is required</mat-error
+      >
+    </mat-form-field>
+    <div style="margin-top: 10px">
+      <div style="margin-right: 3%; color: #6b6b6b">
+        <mat-label>Gender</mat-label>
+      </div>
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="Male">Male</mat-radio-button>
+        <mat-radio-button value="Female">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <mat-form-field appearance="standard" class="width-50">
+      <mat-label>Address Line 1:</mat-label>
+      <textarea
+        matInput
+        placeholder="Address Line 1"
+        formControlName="addressLine1"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="width-50">
+      <mat-label>Address Line 2:</mat-label>
+      <textarea
+        matInput
+        placeholder="Address Line 2"
+        formControlName="addressLine2"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="width-50">
+      <mat-label>Street:</mat-label>
+      <input matInput formControlName="street" placeholder="Street" />
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="width-50">
+      <mat-label>City:</mat-label>
+      <input matInput formControlName="city" placeholder="City" />
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="width-50">
+      <mat-label>State:</mat-label>
+      <input matInput formControlName="state" placeholder="State" />
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="width-50">
+      <mat-label>Pin:</mat-label>
+      <input matInput formControlName="pin" placeholder="pin" type="number" />
+    </mat-form-field>
+    <div style="margin-top: 10px">
+      <mat-checkbox (change)="isSameAddress($event)">Same Address</mat-checkbox>
+    </div>
+    <mat-form-field appearance="standard" class="width-50">
+      <mat-label>Address Line 1:</mat-label>
+      <textarea
+        matInput
+        placeholder="Address Line 1"
+        formControlName="sameAddressLine1"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="width-50">
+      <mat-label>Address Line 2:</mat-label>
+      <textarea
+        matInput
+        placeholder="Address Line 2"
+        formControlName="sameAddressLine2"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="width-50">
+      <mat-label>Street:</mat-label>
+      <input matInput formControlName="sameStreet" placeholder="Street" />
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="width-50">
+      <mat-label>City:</mat-label>
+      <input matInput formControlName="sameCity" placeholder="City" />
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="width-50">
+      <mat-label>State:</mat-label>
+      <input matInput formControlName="sameState" placeholder="State" />
+    </mat-form-field>
+    <mat-form-field appearance="legacy" class="width-50">
+      <mat-label>Pin:</mat-label>
+      <input matInput formControlName="samePin" placeholder="pin" type="number"/>
+    </mat-form-field>
+    <div mat-dialog-actions align="end">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
