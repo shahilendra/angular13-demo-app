@@ -60,6 +60,14 @@
     >
       <i class="w3-medium fa fa-plus"></i> Dynamic Form</a
     >
+    <a
+      *ngIf="userRole == 'Admin'"
+      class="w3-bar-item w3-button"
+      routerLink="/organisation"
+      [ngClass]="{ 'w3-teal': active === '/organisation' }"
+    >
+      <i class="w3-medium fa fa-plus"></i> Organisation</a
+    >
     <a class="w3-bar-item w3-button" (click)="onLogout()"
       ><i class="w3-medium fa fa-sign-out"></i> Logout</a
     >

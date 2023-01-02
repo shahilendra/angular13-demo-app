@@ -12,6 +12,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
 import { ShopingCheckoutComponent } from './shoping-checkout/shoping-checkout.component';
 import { ShopingPaymentComponent } from './shoping-payment/shoping-payment.component';
+import { OrganisationComponent } from './organisation/organisation.component';
 
 const routes: Routes = [
   {
@@ -64,6 +65,10 @@ const routes: Routes = [
         },  {
           path: 'dynamic',
           component: DynamicFormUiComponent,
+          canActivate: [AuthService]
+        }, {
+          path: 'organisation',
+          component:OrganisationComponent,
           canActivate: [AuthService]
         }
       ]

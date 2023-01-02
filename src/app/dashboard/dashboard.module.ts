@@ -28,6 +28,7 @@ import { DynamicFormComponent } from './dynamic-form-ui/dynamic/dynamic-form/dyn
 import { DeleteEmployeeComponent } from './employees/delete-employee/delete-employee.component';
 import { EditEmployeeComponent } from './employees/edit-employee/edit-employee.component';
 import { LogoutConfirmComponent } from './home/logout-confirm/logout-confirm.component';
+import { OrganisationComponent } from './organisation/organisation.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { LogoutConfirmComponent } from './home/logout-confirm/logout-confirm.com
     DynamicFormComponent,
     DeleteEmployeeComponent,
     EditEmployeeComponent,
-    LogoutConfirmComponent
+    LogoutConfirmComponent,
+    OrganisationComponent
   ],
   imports: [
     CommonModule,
